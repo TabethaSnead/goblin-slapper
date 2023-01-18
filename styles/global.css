@@ -1,9 +1,9 @@
-:root {
+/* :root {
     --background: rgb(224, 234, 247);
     --header-background: rgb(254, 251, 245);
     --primary-font: Corbel, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans',
         'Bitstream Vera Sans', 'Liberation Sans', Verdana, 'Verdana Ref', sans-serif;
-}
+} */
 
 body {
     font-family: var(--primary-font);
@@ -11,8 +11,8 @@ body {
     display: grid;
     grid-template-rows: auto 1fr;
 }
-
-header {
+/* 
+ header {
     position: sticky;
     top: 0;
     padding: 15px;
@@ -24,7 +24,7 @@ header {
 
     background-color: var(--header-background);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-}
+}  */
 
 header .logo {
     height: 100%;
@@ -32,4 +32,54 @@ header .logo {
 
 main {
     padding: 20px;
+    background-image: url(../assets/moria.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.instructions {
+    color: grey;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    background-color: rgb(34, 31, 31);
+    border-radius: 5px;
+    text-align: center;
+}
+.gandalfs-HP {
+    background-color: grey;
+    width: 200px;
+    font-size: 25px;
+    border-radius: 5px;
+    text-align: center;
+}
+.gandalfs-img {
+    height: 500px;
+}
+.defeated-goblins {
+    color: grey;
+    font-size: 30px;
+    background-color: rgb(66, 58, 58);
+    width: 320px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 75px;
+}
+.goblin-section {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+.spacing-section {
+    display: flex;
+    justify-content: space-between;
+}
+.added-goblins {
+    background-color: rgb(28, 28, 28);
+    color: rgb(95, 94, 94);
+}
+.added-goblins:hover {
+    cursor: pointer;
+    background-color: rgb(2, 36, 7);
+    transition: all 0.2s ease-in-out;
 }
