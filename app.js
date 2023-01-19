@@ -8,7 +8,7 @@ const addedGoblin = document.getElementById('added-goblin');
 const gandalfHPel = document.getElementById('gandalf-hp-span');
 const gandalfimg = document.getElementById('gandalf-img');
 /* State */
-let gandalfsHP = 20;
+let gandalfsHP = 15;
 let defeatCount = 0;
 const goblins = [
     {
@@ -21,7 +21,7 @@ const goblins = [
     },
     {
         name: 'Golfimbul',
-        hp: 7,
+        hp: 6,
     },
 ];
 
@@ -46,7 +46,7 @@ function displayGoblins() {
         const newGoblin = renderGoblin(goblin);
 
         newGoblin.addEventListener('click', () => {
-            if (goblin.hp > 0) {
+            if (goblin.hp > 0 && gandalfsHP > 0) {
                 if (Math.random() > 0.6) {
                     alert('Gandalf Missed the Goblin');
                 } else {
@@ -63,6 +63,10 @@ function displayGoblins() {
             }
             if (goblin.hp === 0) {
                 defeatCount++;
+            }
+            if (gandalfsHP === 0) {
+                alert('The Game is Over');
+                goblinButton.disabled = true;
             }
 
             displayGoblins();
