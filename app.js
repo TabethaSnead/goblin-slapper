@@ -25,7 +25,6 @@ const goblins = [
     },
 ];
 
-console.log(goblins);
 /* Events */
 goblinButton.addEventListener('click', () => {
     const input = goblinInput.value;
@@ -45,7 +44,7 @@ function displayGoblins() {
 
     for (let goblin of goblins) {
         const newGoblin = renderGoblin(goblin);
-        console.log(newGoblin);
+
         newGoblin.addEventListener('click', () => {
             if (goblin.hp > 0) {
                 if (Math.random() > 0.6) {
@@ -67,7 +66,6 @@ function displayGoblins() {
             }
 
             displayGoblins();
-            console.log('clicked', goblin.hp);
         });
 
         gandalfHPel.textContent = gandalfsHP;
