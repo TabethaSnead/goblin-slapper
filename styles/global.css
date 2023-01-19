@@ -87,3 +87,9 @@ main {
     background-color: rgb(2, 36, 7);
     transition: all 0.2s ease-in-out;
 }
+.goblin-emoji {
+    transform: scale(2.2);
+}
+.goblin-emoji:hover {
+    transform: scale(2.6);
+}

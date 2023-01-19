@@ -21,7 +21,7 @@ const goblins = [
     },
     {
         name: 'Golfimbul',
-        hp: 10,
+        hp: 7,
     },
 ];
 
@@ -62,10 +62,17 @@ function displayGoblins() {
                     alert('Gandalf got hit by one of the Goblins');
                 }
             }
+            if (goblin.hp === 0) {
+                defeatCount++;
+            }
 
             displayGoblins();
             console.log('clicked', goblin.hp);
         });
+
+        gandalfHPel.textContent = gandalfsHP;
+        defeatedGoblin.textContent = defeatCount;
+
         addedGoblin.append(newGoblin);
     }
 }
