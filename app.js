@@ -46,13 +46,29 @@ function displayGoblins() {
     for (let goblin of goblins) {
         const newGoblin = renderGoblin(goblin);
         console.log(newGoblin);
-        addedGoblin.addEventListener('click', () => {
-            // if (goblin.hp < 0 && gandalfsHP < 0) {
-            // }
-            console.log('clicked');
+        newGoblin.addEventListener('click', () => {
+            if (goblin.hp > 0) {
+                if (Math.random() > 0.6) {
+                    alert('Gandalf Missed the Goblin');
+                } else {
+                    goblin.hp--;
+                    alert('Gandalf hit the Goblin');
+                }
+
+                if (Math.random() > 0.5) {
+                    alert('The Goblin missed Gandalf');
+                } else {
+                    gandalfsHP--;
+                    alert('Gandalf got hit by one of the Goblins');
+                }
+            }
+
+            displayGoblins();
+            console.log('clicked', goblin.hp);
         });
         addedGoblin.append(newGoblin);
     }
 }
 
 // (don't forget to call any display functions you want to run on page load!)
+displayGoblins();
