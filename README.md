@@ -1,3 +1,5 @@
+![Wireframe of goblin-slapper](./assets/wireframe.png)
+
 ## The Golden Rule:
 
 🦸 🦸‍♂️ `Stop starting and start finishing.` 🏁
@@ -25,3 +27,41 @@ Additional considerations:
     -   What needs to live in a persistence layer?
 -   Is there some state we need to initialize?
 -   Ask: should any of this work be abstracted into functions? (i.e., is the work complicated? can it be reused?)
+
+## HTML
+
+-div,span- for dispalying how many gobins have been defeated
+-img- for fighter
+-div,span- to display fighters hp
+-h2- instructions on how to play the game
+-input- for user to type goblins name- input.value
+-button- for user to challenge new goblin- addEventListener
+-div- to display goblins name, emoji and hp-addEventListener- nameInput ||
+-div- name
+-div- emoji
+-span- health points
+-p- to append new goblins into from array-document.createElement
+
+## state
+
+-user hp
+-goblin hp
+-defeated goblin counter
+
+## Events
+
+-user clicks challenge goblin button
+-goblin name chosen from input or randomly generated will be assigned a random hp
+-push new goblin to array
+Veiw
+-new goblin element is visible to the user
+-user clicks on single goblin element
+-the user either hits or misses
+-the goblin hits or misses - the hp is effected depending on who hit who- if(){}else
+Veiw
+-launch alerts to display if the attack hits or misses-alert
+-player hp changes(maybe)-if(){}else
+-goblin hp changes(maybe)
+-update goblin emoji(maybe)
+-defeated goblins changes(maybe)
+-player img position changes(maybe)
