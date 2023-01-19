@@ -74,11 +74,15 @@ main {
     display: flex;
     justify-content: space-between;
 }
-.added-goblin {
+.goblin-div {
+    margin: 10px;
     background-color: rgb(28, 28, 28);
     color: rgb(95, 94, 94);
+    border: black solid 3px;
+    width: 100px;
+    text-align: center;
 }
-.added-goblin:hover {
+.goblin-div:hover {
     cursor: pointer;
     background-color: rgb(2, 36, 7);
     transition: all 0.2s ease-in-out;
